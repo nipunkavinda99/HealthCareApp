@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521FD35A2BA4407E002AE052 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521FD3592BA4407E002AE052 /* LoginScreenView.swift */; };
+		521FD35D2BA4490A002AE052 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521FD35C2BA4490A002AE052 /* LoginViewModel.swift */; };
 		52C110882BA4165300261AA6 /* DChannelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C110872BA4165300261AA6 /* DChannelApp.swift */; };
 		52C1108A2BA4165300261AA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C110892BA4165300261AA6 /* ContentView.swift */; };
 		52C1108C2BA4165400261AA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52C1108B2BA4165400261AA6 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		521FD3592BA4407E002AE052 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
+		521FD35C2BA4490A002AE052 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		52C110842BA4165300261AA6 /* DChannel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DChannel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C110872BA4165300261AA6 /* DChannelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DChannelApp.swift; sourceTree = "<group>"; };
 		52C110892BA4165300261AA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +79,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521FD3572BA44043002AE052 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				521FD3582BA44051002AE052 /* Views */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		521FD3582BA44051002AE052 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				521FD35B2BA448F1002AE052 /* ViewModel */,
+				521FD3592BA4407E002AE052 /* LoginScreenView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		521FD35B2BA448F1002AE052 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				521FD35C2BA4490A002AE052 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		52C1107B2BA4165300261AA6 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +175,7 @@
 		52C110B22BA4168D00261AA6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				521FD3572BA44043002AE052 /* Login */,
 				52C110B52BA4171700261AA6 /* Splash */,
 			);
 			path = Core;
@@ -327,7 +357,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521FD35A2BA4407E002AE052 /* LoginScreenView.swift in Sources */,
 				52C1108A2BA4165300261AA6 /* ContentView.swift in Sources */,
+				521FD35D2BA4490A002AE052 /* LoginViewModel.swift in Sources */,
 				52C110BC2BA41B9000261AA6 /* CustomizableButton.swift in Sources */,
 				52C110882BA4165300261AA6 /* DChannelApp.swift in Sources */,
 				52C110B82BA4174700261AA6 /* SplashScreenView.swift in Sources */,
@@ -494,6 +526,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DChannel/Preview Content\"";
+				DEVELOPMENT_TEAM = J3A73K8678;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -501,6 +534,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,6 +556,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DChannel/Preview Content\"";
+				DEVELOPMENT_TEAM = J3A73K8678;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -529,6 +564,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

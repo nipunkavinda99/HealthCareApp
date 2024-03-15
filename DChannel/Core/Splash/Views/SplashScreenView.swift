@@ -11,34 +11,36 @@ struct SplashScreenView: View {
     @State private var nextScreen:Bool = false
     var body: some View {
         NavigationStack{
-                VStack{
-                    backgroundDesign
-                        .offset(y:-50)
-                        .ignoresSafeArea()
-                    Spacer()
-                    wording
-                    CustomizableButton(buttonText: "Let's go", buttonColor: .purple, buttonWidth: 200, buttonHeight: 55, buttonImage: true, buttonAction: {
-                        nextScreen.toggle()
+            VStack{
+                backgroundDesign
+                    .offset(y:-50)
+                    .ignoresSafeArea()
+                Spacer()
+                wording
+                Spacer()
+                CustomizableButton(buttonText: "Let's go", buttonColor: .purple, buttonWidth: 200, buttonHeight: 55, buttonImage: true, textColor: .white, buttonAction: {
+                    nextScreen.toggle()
+                })
+                .padding(.horizontal)
+                aboutUs
+                Spacer()
+                
+            }.navigationDestination(isPresented: $nextScreen) {
+               LoginScreenView()
+                    .navigationBarTitleDisplayMode(.automatic)
+                    .navigationBarBackButtonHidden(true)
+                    .toolbar(content: {
+                        ToolbarItem(placement: .topBarLeading) {
+                            Button(action: {
+                                nextScreen.toggle()
+                            }, label: {
+                                Image(systemName: "chevron.left")
+                                    .foregroundStyle(.bar)
+                            })
+                            
+                        }
                     })
-                    .padding(.horizontal)
-                    aboutUs
-                    Spacer()
-                    
-                }.navigationDestination(isPresented: $nextScreen) {
-                    EmptyView()
-                        .navigationBarTitleDisplayMode(.automatic)
-                        .navigationBarBackButtonHidden(true)
-                        .toolbar(content: {
-                            ToolbarItem(placement: .topBarLeading) {
-                                Button(action: {
-                                    nextScreen.toggle()
-                                }, label: {
-                                    Image(systemName: "chevron.left")
-                                })
-                                
-                            }
-                        })
-                }
+            }
         }
     }
 }

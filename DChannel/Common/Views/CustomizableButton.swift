@@ -13,6 +13,7 @@ struct CustomizableButton: View {
     @State var buttonWidth:CGFloat
     @State var buttonHeight:CGFloat
     @State var buttonImage:Bool
+    @State var textColor:Color
     @State var buttonAction:()->Void
     var body: some View {
         Button(action: {
@@ -34,7 +35,7 @@ extension CustomizableButton{
                     .textCase(.uppercase)
                     .font(.body)
                     .fontWeight(.bold)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(textColor)
                
                 if buttonImage == true{
                     Image(systemName: "arrowshape.forward.fill")
@@ -49,5 +50,5 @@ extension CustomizableButton{
     }
 }
 #Preview {
-    CustomizableButton(buttonText: "NEXT", buttonColor: .purple, buttonWidth: 200, buttonHeight: 55, buttonImage: true, buttonAction: {})
+    CustomizableButton(buttonText: "NEXT", buttonColor: .purple, buttonWidth: 200, buttonHeight: 55, buttonImage: true, textColor: .white, buttonAction: {})
 }
